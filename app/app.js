@@ -9,6 +9,7 @@ app.use(require('./routes/speaker'));
 
 app.set('view engine', 'ejs');
 app.set('views', 'app/views');
+app.set('appData', dataFile);
 
 
 //public folder
