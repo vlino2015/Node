@@ -10,7 +10,15 @@ $(function() {
     }, updateFeedback);
   });
 
-  
+  $('.feedback-messages').on('click', function(e) {
+    if (e.target.className == 'glyphicon glyphicon-remove') {
+      $.ajax({
+        url: 'api/' + e.target.id,
+        type: 'DELETE',
+        success: updateFeedback
+      }); //ajax
+    } // the target is a delete button
+}); //feedback messages
 
   function updateFeedback(data) {
    var output = '';

@@ -1,5 +1,7 @@
 var express = require('express');
 var router = express.Router();
+//var rocker = require('../util/hello.js');
+
 
 router.get('/', function(req, res){
     var data = req.app.get('appData');
@@ -16,6 +18,8 @@ router.get('/', function(req, res){
         pageID: 'Veronica',
         artwork: pagePhotos
     });
+
+    //console.log(rocker.name('Veronica Lino')); 
 });
 
 module.exports = router;
